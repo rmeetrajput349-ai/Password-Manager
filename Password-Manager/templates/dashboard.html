@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h2>🔑 Password Manager</h2>
+
+      <form method="POST">
+        <input name="site" placeholder="Website" />
+        <input name="username" placeholder="Username">
+        <input name="password" placeholder="Password" />
+        <button>Add</button>
+      </form>
+
+      <a href="/logout">Logout</a>
+      <hr>
+
+      <table>
+        {% for id, s, u, p in data %}
+        <tr>
+          <td>{{s}}</td>
+          <td>{{u}}</td>
+          <td>
+            <input type="password" value="{{p}}" id="pwd{{loop.index}}" readonly>
+
+              <button onclick="togglePassword('pwd{{loop.index}}')">👁️</button>
+              <button onclick="copyPassword('pwd{{loop.index}}')">📋</button>
+          </td>
+          <td>
+            <a href="/delete/{{id}}">
+              <button>Delete</button>
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+
+    </div>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
+
+

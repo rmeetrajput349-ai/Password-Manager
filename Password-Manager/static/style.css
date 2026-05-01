@@ -1,0 +1,152 @@
+body {
+  background: #0f2027;
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 20px black;
+}
+input,
+button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+button {
+  background: #0f2027;
+  color: white;
+  border: none;
+}
+
+/* Dashboard Specific Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logout-link {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.logout-link:hover {
+  color: #ef4444;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  color: #64748b;
+}
+
+.input-group input {
+  padding-left: 45px !important;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 25px 0;
+}
+
+.vault-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Custom Scrollbar */
+.vault-container::-webkit-scrollbar {
+  width: 5px;
+}
+.vault-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.item-info .site-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+}
+
+.item-info .masked-pass {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  letter-spacing: 2px;
+}
+
+.item-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.delete-btn {
+  color: #ef4444;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.flash-msg {
+  background: rgba(99, 102, 241, 0.2);
+  border: 1px solid var(--primary);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+td {
+    padding: 8px;
+}
+
+.password-box {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.password-box input {
+    width: 120px;
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+}
